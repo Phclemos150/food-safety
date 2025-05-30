@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ meal?.strMeal }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="meal">
+  <img [src]="meal.strMealThumb" alt="{{ meal.strMeal }}" width="100%" />
+
+  <h2>Categoria: {{ meal.strCategory }}</h2>
+  <h3>Cozinha: {{ meal.strArea }}</h3>
+
+  <h4>Ingredientes:</h4>
+  <ul>
+    <li *ngFor="let item of getIngredients()">{{ item }}</li>
+  </ul>
+
+  <h4>Instruções:</h4>
+  <p>{{ meal.strInstructions }}</p>
+</ion-content>
+
