@@ -12,8 +12,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'meal-detail',
-    loadChildren: () => import('./meal-detail/meal-detail.module').then( m => m.MealDetailPageModule)
+    path: 'meal-detail/:id',
+    loadChildren: () => import('./meal-detail/meal-detail.module').then(m => m.MealDetailPageModule)
+  },
+  {
+    path: 'meal',
+    loadChildren: () => import('./meal-detail/meal-detail.module').then(m => m.MealDetailPageModule)
   },
   {
     path: 'buscar',
