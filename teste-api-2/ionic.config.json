@@ -1,7 +1,0 @@
-{
-  "name": "food-safaty",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
